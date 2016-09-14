@@ -4,3 +4,129 @@ html(lang='en')
   include ../templates/mixins.jade
   
   body
+    .header
+      img.logo(src="img/logo.png", alt="")
+      ul.menu
+        li.menu__item
+          a.menu__item-link(href="#") Готовые наборы
+        li.menu__item
+          a.menu__item-link(href="#") Подарочные локомотивы
+        li.menu__item
+          a.menu__item-link(href="#") История
+        li.menu__item
+          a.menu__item-link(href="#") О студии
+        li.menu__item
+          a.menu__item-link(href="#") Контакты
+    .banner
+      .banner__item.banner__item--masters
+        .banner__item-author Студия Николая Кузнецова
+        h1.banner__item-header Миниатюрные железные дороги от самых преданных мастеров своего дела
+        a.btn.btn--colored(href="#") Перейти в каталог
+    .set-section
+      h2.section-header.section-header--black.section-header--center Готовые наборы
+      ul.sets__list
+        +set('Макет «Подарочный»', '140x100x80 см', '4-6 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-1.jpg', 'Ваш ребенок запомнит этот день на всю жизнь')
+        +set('Макет «Мечта детсва»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '95 000 руб.', 'set-2.jpg', 'Ваша мечта сбывается!')
+        +set('Макет «Детский интеллект»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Чешское качество', '130 000 руб.', 'set-3.jpg', 'Развивает интеллект у ребенка')
+        +set('Макет «Желанный»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '190 000 руб.', 'set-4.jpg', 'Никогда не надоедает, работает как машина')
+        +set('Макет «Босс»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-5.jpg', 'Предназначен для хозяина жизни!')
+        +set('Макет «Счастливый»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '290 000 руб.', 'set-6.jpg', 'Счастье всей вашей семьи гарантированно')
+    .individual
+      img.individual__logo(src="img/logo-individual.png", alt="Mr. Tutu")
+      h2.section-header.section-header--white.section-header--left Индивидуальные макеты
+      ul.individual__reasons
+        li.individual__reasons-item Необходимо вписать в интерьер
+        li.individual__reasons-item Мечтаете о гудке, как у настоящего паровоза
+        li.individual__reasons-item Нужен очень большой макет
+        li.individual__reasons-item Желаете самое оригинальное решение
+        li.individual__reasons-item Желаете много пара
+        li.individual__reasons-item Желаете менее компактный
+      .individual__btns
+        a.btn.btn--transparent(href="#") Портфолио работ
+        a.btn.btn--colored(href="#") Заказать консультацию
+    .locomotives
+      h2.section-header.section-header--black.section-header--left Подарочные локомотивы
+      ul.locomotives__list
+        li.locomotives__item
+          img.locomotives__item-picture(src="img/locomotive-1.jpg", alt=" Локомотив «РЖД»")
+          p.locomotives__item-name Модель «РЖД»
+          p.locomotives__item-price 25 500 руб.
+          a.btn.btn--colored(href="#") Купить
+        li.locomotives__item
+          img.locomotives__item-picture(src="img/locomotive-2.jpg", alt="Модель «Электровоз»")
+          p.locomotives__item-name Модель «Электровоз»
+          p.locomotives__item-price 36 000 руб.
+          a.btn.btn--colored(href="#") Купить
+        li.locomotives__item
+          img.locomotives__item-picture(src="img/locomotive-3.jpg", alt="Модель «Кран»")
+          p.locomotives__item-name Модель «Кран»
+          p.locomotives__item-price 37 000 руб.
+          a.btn.btn--colored(href="#") Купить
+    .history
+      h2.section-header.section-header--white.section-header--left История студии
+      .history__content
+        .history__content-left
+          p.history__text В детсве я ездил на поезде каждый год. В Лениногорск, где живут мои бабушка с дедушкой. <br><br>Я обожал любоваться пейцажем из окна! Особый восторг высывала возможность опустить окно плацкарта и полностью высунуть голову из вагона...
+          a.btn.btn--transparent(href="#") Читаль далее
+        .history__ceo-photo
+        .history__ceo-dscr
+          .history__ceo-name Николай Кузнецов
+          .history__ceo-position Генеральный директор
+    .about
+      h2.section-header.section-header--black.section-header--left Несколько слов о нас
+      p.about__text Вы всегда можете заглянуть в наш шоурум вместе с будущими обладателями игрушки, в любое удобное для вас время, чтобы не только увидеть все своими глазами, но и опробовать железную дорогу в действии, приняв участие в увлекательной игре!
+      .testdrive
+        ul.testdrive__features
+          li.testdrive__features-item Поуправляйте железной дорогой самостоятельно
+          li.testdrive__features-item Познакомтесь с генеральным директором
+          li.testdrive__features-item Посмотрие столкновение и переворачивание поездов
+          li.testdrive__features-item Оцените безопасность железных дорог
+          li.testdrive__features-item Выпейте чащечку чая или кофе
+          li.testdrive__features-item Купите железную дорогу
+        .testdrive__bottom
+          a.btn.btn--colored(href="#") Записаться на тестдрайв
+    .faq
+      h2.section-header.section-header--white.section-header--left Часто задаваемые вопросы
+      ul.faq__list
+        li.faq__item
+          h3.faq__item-header Монтаж
+          p.faq__item-content Монтаж производится в кратчайшие сроки к установленной вами датой точно в срок
+        li.faq__item
+          h3.faq__item-header Доставка
+          p.faq__item-content Доставка осуществляется по Москве, и транспортными компаниями по территории РФ и СНГ
+        li.faq__item
+          h3.faq__item-header Гарантия
+          p.faq__item-content На всю нашу продукцию дается гарантия сроком на 3 года с техническим обслуживание
+        li.faq__item
+          h3.faq__item-header Оплата
+          p.faq__item-content Мы принимаем к оплате банковские карты и наличные деньги в нашем шоуруме
+        li.faq__item
+          h3.faq__item-header Сервис и ремонт
+          p.faq__item-content Мы готовы предложить техническое обслуживание  для вашей железной дороги с ремонтов всех неисправных частей
+        li.faq__item
+          h3.faq__item-header Модернизация
+          p.faq__item-content Поезда, вагоня, озеленение, фигурки — каждый раз вы сможете радовать своего ребенка новыи маленькими сюрпризами
+    .contacts
+      .contacts__content
+        h2.section-header.section-header--black.section-header--left.section-header--no-border Контакты
+        p.contacts__text Мы всегда будем рады встретить вас в нашем шоуруме!
+        p.contacts__address г. Москва, Большая полянка 51 а/9, офис 532
+        .contacts__info
+          .contacts__info-item.contacts__info-item--phone 8 (499) 501-15-38
+          a.contacts__info-item.contacts__info-item--email(href="#") kupitutu@mail.ru
+      .contacts__map
+    footer.footer
+      .footer__left
+        p.footer__copyright © 2012—2016 «Mr. TUTU»
+        p.footer__dscr Коллектив специалистов железнодорожного макетирования
+      .footer__center
+        a.btn.btn--transparent(href="#") Тибетский взгляд на воспитание детей
+        a.creator(href="#")
+          img.creator__logo(src="creator.png", alt="")
+          .creator__link Создание сайта
+      .footer__right
+        .subscribe
+          .subscribe__header Подписаться на новые работы
+          form.subscribe__form
+            input.subscribe__input(type="text" placeholder="Ваш e-mail" name="email")
+            button.subscribe__btn

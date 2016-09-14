@@ -1,0 +1,27 @@
+mixin set(title, size, crafting, durability, feature1, feature2, feature3, price, picture, quote)
+  li.set
+    .set__left
+      h3.set__header #{title}
+      .set-info
+        ul.set-info__numbers
+          li.set-info__numbers-item
+            .set-info__numbers-item-header Размер:
+            .set-info__numbers-item-content #{size}
+          li.set-info__numbers-item
+            .set-info__numbers-item-header Производство:
+            .set-info__numbers-item-content #{crafting}
+          li.set-info__numbers-item
+            .set-info__numbers-item-header Срок службы:
+            .set-info__numbers-item-content #{durability}
+        ul.set-info__features
+          li.set-info__features-item #{feature1}
+          li.set-info__features-item #{feature2}
+          li.set-info__features-item #{feature3}
+      .set__bottom
+        a.btn.btn--colored(href="#") Подробнее
+        .set__price #{price}
+    .set__right
+      img.set__picture(src="img/" + picture, alt=title)
+      .set__quote
+        .set__quote-content #{quote}
+        .set__quote-author Н. Кузнецов
