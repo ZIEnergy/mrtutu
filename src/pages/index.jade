@@ -5,45 +5,50 @@ html(lang='en')
   
   body
     .header
-      img.logo(src="img/logo.png", alt="")
-      ul.menu
-        li.menu__item
-          a.menu__item-link(href="#") Готовые наборы
-        li.menu__item
-          a.menu__item-link(href="#") Подарочные локомотивы
-        li.menu__item
-          a.menu__item-link(href="#") История
-        li.menu__item
-          a.menu__item-link(href="#") О студии
-        li.menu__item
-          a.menu__item-link(href="#") Контакты
+      .wrapper
+        img.logo(src="img/logo.png", alt="")
+        nav.menu
+          .menu__left
+            .menu__item
+              a.menu__item-link(href="#") Готовые наборы
+            .menu__item
+              a.menu__item-link(href="#") Подарочные локомотивы
+          .menu__right
+            .menu__item
+              a.menu__item-link(href="#") История
+            .menu__item
+              a.menu__item-link(href="#") О студии
+            .menu__item
+              a.menu__item-link(href="#") Контакты
     .banner
       .banner__item.banner__item--masters
         .banner__item-author Студия Николая Кузнецова
-        h1.banner__item-header Миниатюрные железные дороги от самых преданных мастеров своего дела
-        a.btn.btn--colored(href="#") Перейти в каталог
-    .set-section
-      h2.section-header.section-header--black.section-header--center Готовые наборы
-      ul.sets__list
-        +set('Макет «Подарочный»', '140x100x80 см', '4-6 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-1.jpg', 'Ваш ребенок запомнит этот день на всю жизнь')
-        +set('Макет «Мечта детсва»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '95 000 руб.', 'set-2.jpg', 'Ваша мечта сбывается!')
-        +set('Макет «Детский интеллект»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Чешское качество', '130 000 руб.', 'set-3.jpg', 'Развивает интеллект у ребенка')
-        +set('Макет «Желанный»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '190 000 руб.', 'set-4.jpg', 'Никогда не надоедает, работает как машина')
-        +set('Макет «Босс»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-5.jpg', 'Предназначен для хозяина жизни!')
-        +set('Макет «Счастливый»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '290 000 руб.', 'set-6.jpg', 'Счастье всей вашей семьи гарантированно')
+        h1.banner__item-header Миниатюрные железные дороги от <br>самых преданных мастеров своего дела
+        a.btn.btn--colored.banner__btn(href="#") Перейти в каталог
+    .sets-section
+      .wrapper
+        h2.section-header.section-header--black.section-header--center.sets-section__header Готовые наборы
+        ul.sets-section__list
+          +set('Макет «Подарочный»', '140x100x80 см', '4-6 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-1.jpg', 'Ваш ребенок запомнит этот день на всю жизнь')
+          +set('Макет «Мечта детсва»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '95 000 руб.', 'set-2.jpg', 'Ваша мечта сбывается!')
+          +set('Макет «Детский интеллект»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Чешское качество', '130 000 руб.', 'set-3.jpg', 'Развивает интеллект у ребенка')
+          +set('Макет «Желанный»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '190 000 руб.', 'set-4.jpg', 'Никогда не надоедает, работает как машина')
+          +set('Макет «Босс»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-5.jpg', 'Предназначен для хозяина жизни!')
+          +set('Макет «Счастливый»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '290 000 руб.', 'set-6.jpg', 'Счастье всей вашей семьи гарантированно')
     .individual
-      img.individual__logo(src="img/logo-individual.png", alt="Mr. Tutu")
-      h2.section-header.section-header--white.section-header--left Индивидуальные макеты
-      ul.individual__reasons
-        li.individual__reasons-item Необходимо вписать в интерьер
-        li.individual__reasons-item Мечтаете о гудке, как у настоящего паровоза
-        li.individual__reasons-item Нужен очень большой макет
-        li.individual__reasons-item Желаете самое оригинальное решение
-        li.individual__reasons-item Желаете много пара
-        li.individual__reasons-item Желаете менее компактный
-      .individual__btns
-        a.btn.btn--transparent(href="#") Портфолио работ
-        a.btn.btn--colored(href="#") Заказать консультацию
+      .wrapper
+        img.individual__logo(src="img/logo-individual.png", alt="Mr. Tutu")
+        h2.section-header.section-header--white.section-header--left Индивидуальные макеты
+        ul.individual__reasons
+          li.individual__reasons-item Необходимо вписать в интерьер
+          li.individual__reasons-item Мечтаете о гудке, как у настоящего паровоза
+          li.individual__reasons-item Нужен очень большой макет
+          li.individual__reasons-item Желаете самое оригинальное решение
+          li.individual__reasons-item Желаете много пара
+          li.individual__reasons-item Желаете менее компактный
+        .individual__btns
+          a.btn.btn--transparent(href="#") Портфолио работ
+          a.btn.btn--colored(href="#") Заказать консультацию
     .locomotives
       h2.section-header.section-header--black.section-header--left Подарочные локомотивы
       ul.locomotives__list

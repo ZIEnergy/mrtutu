@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
+  &__left {
+    display: flex;
+  }
+  
+  &__right {
+    display: flex;
+  }
+  
+  &__item {
+    
+    &:nth-child(n+2) {
+      margin-left: 75px;
+    }
+  }
+  
+  &__item-link {
+    font-family: @text-font;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
