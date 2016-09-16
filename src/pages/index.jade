@@ -5,8 +5,8 @@ html(lang='en')
   
   body
     .header
+      img.logo(src="img/logo.png", alt="")
       .wrapper
-        img.logo(src="img/logo.png", alt="")
         nav.menu
           .menu__left
             .menu__item
@@ -77,7 +77,7 @@ html(lang='en')
         .history__content
           .history__content-left
             p.history__text В детсве я ездил на поезде каждый год. В Лениногорск, где живут мои бабушка с дедушкой. <br><br>Я обожал любоваться пейцажем из окна! Особый восторг высывала возможность опустить окно плацкарта и полностью высунуть голову из вагона...
-            a.btn.btn--transparent.history__btn(href="#") Читаль далее
+            a.btn.btn--transparent.history__btn.fancybox(href="#story") Читаль далее
           .history__ceo-photo
           .history__ceo-dscr
             .history__ceo-name Николай Кузнецов
@@ -135,7 +135,7 @@ html(lang='en')
           p.footer__copyright © 2012—2016 «Mr. TUTU»
           p.footer__dscr Коллектив специалистов железнодорожного макетирования
         .footer__center
-          a.btn.btn--transparent.footer__btn(href="#") Тибетский взгляд на воспитание детей
+          a.btn.btn--transparent.footer__btn.fancybox(href="#tibet") Тибетский взгляд на воспитание детей
           a.creator(href="#")
             img.creator__logo(src="img/creator-logo.png", alt="")
             .creator__link Создание сайта
@@ -145,3 +145,4 @@ html(lang='en')
             form.subscribe__form
               input.subscribe__input(type="text" placeholder="Ваш e-mail" name="email")
               button.subscribe__btn
+    include ../templates/modals.jade

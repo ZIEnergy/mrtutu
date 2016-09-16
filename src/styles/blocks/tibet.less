@@ -1,0 +1,142 @@
+.tibet {
+  width: 880px;
+  overflow: hidden;
+  
+  &__top {
+    padding: 45px;
+    padding-bottom: 0;
+  }
+  
+  &__annotation {
+    color: #2e2b2b;
+    font-family: @header-font;
+    font-size: 22px;
+    line-height: 32px;
+    margin: 35px 0;
+  }
+  
+  &__period {
+    border-top: @border-grey;
+    padding-top: 50px;
+    margin-bottom: 45px;
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: block;
+      color: #f7efdc;
+      font-family: @numbers-font;
+      font-size: 299px;
+      font-weight: 700;
+      position: absolute;
+    }
+    
+    &:nth-child(1) {
+      
+      &:before {
+        content: '1';
+        top: -20px;
+        right: 90px;
+      }
+    }
+    
+    &:nth-child(2) {
+      
+      &:before {
+        content: '2';
+        top: -27px;
+        left: 297px;
+      }
+    }
+    
+    &:nth-child(3) {
+      padding-right: 333px;
+      
+      &:before {
+        content: '3';
+        top: -34px;
+        right: 90px;
+      }
+      
+      &:after {
+        content: '';
+        display: block;
+        background: url(../img/tibet-kids.jpg) no-repeat;
+        background-size: cover;
+        width: 394px;
+        height: 245px;
+        position: absolute;
+        right: -100px;
+        top: 50px;
+        flex: 0 0 auto;
+      }
+    }
+    
+    &:nth-child(4) {
+      
+      &:before {
+        content: '4';
+        top: -51px;
+        left: 297px;
+      }
+    }
+  }
+  
+  &__period-header {
+    color: #141414;
+    font-family: @text-font;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__period-dscr {
+    font-family: @text-font;
+    font-size: 18px;
+    line-height: 24px;
+    color: #141414;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__consequences {
+    padding: 60px 45px;
+    background: #f6f6f6 url(../img/tibet-bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__consequences-header {
+    color: @color-primary;
+    font-family: @header-font;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+  }
+  
+  &__consequences-dscr {
+    color: #141414;
+    font-size: 18px;
+    font-family: @text-font;
+    line-height: 24px;
+  }
+  
+  &__btn {
+    width: 212px;
+  }
+  
+  &__bottom {
+    height: 113px;
+    padding-top: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

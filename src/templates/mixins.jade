@@ -18,7 +18,7 @@ mixin set(title, size, crafting, durability, feature1, feature2, feature3, price
           li.set-info__features-item #{feature2}
           li.set-info__features-item #{feature3}
       .set__bottom
-        a.btn.btn--colored.set__button(href="#") Подробнее
+        a.btn.btn--colored.set__button.fancybox(href="#item") Подробнее
         .set__price #{price}
     .set__right
       img.set__picture(src="img/" + picture, alt=title)
