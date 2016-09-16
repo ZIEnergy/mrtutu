@@ -1,3 +1,66 @@
 .individual {
-  margin-top: 326px;
+  padding-top: 320px;
+  position: relative;
+  background: url(../img/individual-bg.jpg) no-repeat;
+  background-size: cover;
+  padding-bottom: 109px;
+  
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  &__reasons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 93px;
+  }
+  
+  &__reasons-item {
+    width: 27%;
+    .text-checked;
+    color: #fff;
+    font-family: @header-font;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 24px;
+    border-left: 1px solid #45362b;
+    margin-left: 40px;
+    padding-left: 40px;
+    
+    &:nth-child(3n+1) {
+      border-left: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    
+    &:nth-child(3n+2) {
+      width: 32%;
+    }
+    
+    &:nth-child(n+4) {
+      padding-top: 40px;
+    }
+  }
+  
+  &__btns {
+    margin-top: 109px;
+    background: #45362b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 37px 0;
+  }
+  
+  &__btn {
+    width: 252px;
+    text-align: center;
+    
+    &:nth-child(n+2) {
+      margin-left: 26px;
+    }
+    
+  }
 }

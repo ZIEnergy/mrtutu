@@ -1,0 +1,80 @@
+.history {
+  background: url(../img/history-bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 95px 100px;
+  
+  &__content {
+    display: flex;
+    margin-left: 168px;
+    margin-top: 51px;
+  }
+  
+  &__content-left {
+    background: rgba(85,77,68, .5);
+    padding: 72px 55px 78px 47px;
+    width: 430px;
+  }
+  
+  &__text {
+    color: #fff;
+    font-family: @text-font;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 60px;
+  }
+  
+  &__btn {
+    width: 182px;
+  }
+  
+  &__ceo-photo {
+    width: 370px;
+    height: 576px;
+    background: url(../img/tutu-ceo.png) no-repeat;
+    background-size: cover;
+    margin-top: -93px;
+    flex: 0 0 auto;
+  }
+  
+  &__ceo-dscr {
+    width: 95px;
+    margin-left: 57px;
+    position: relative;
+    margin-top: 85px;
+    
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 1px;
+      background: @color-primary;
+      left: -41px;
+      top: 34px;
+    }
+  }
+  
+  &__ceo-name {
+    color: #fff;
+    font-family: @header-font;
+    font-size: 22px;
+  }
+  
+  &__ceo-position {
+    color: #be9c9c;
+    font-family: @header-font;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+
+//h2.section-header.section-header--white.section-header--left История студии
+//        .history__content
+//          .history__content-left
+//            p.history__text В детсве я ездил на поезде каждый год. В Лениногорск, где живут мои бабушка с дедушкой. <br><br>Я обожал любоваться пейцажем из окна! Особый восторг высывала возможность опустить окно плацкарта и полностью высунуть голову из вагона...
+//            a.btn.btn--transparent(href="#") Читаль далее
+//          .history__ceo-photo
+//          .history__ceo-dscr
+//            .history__ceo-name Николай Кузнецов
+//            .history__ceo-position Генеральный директор

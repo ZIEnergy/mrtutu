@@ -1,0 +1,108 @@
+.testdrive {
+  margin-top: -128px;
+  background: url(../img/testdrive-bg.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  bottom: -128px;
+  
+  &__features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 57px 79px 70px;
+  }
+  
+  &__features-item {
+    width: 50%;
+    padding-right: 80px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: @text-font;
+    font-weight: 18px;
+    line-height: 24px;
+    
+    &:nth-child(2n) {
+      border-left: @border-dark;
+      padding-left: 70px;
+    }
+    
+    &:nth-child(n+3) {
+      padding-top: 35px;
+    }
+    
+    &:before {
+      content: '';
+      display: block;
+      margin-right: 25px;
+    }
+    
+    &:nth-child(1) {
+      
+      &:before {
+        background: url(../img/testdrive-1.png) no-repeat;
+        background-size: cover;
+        width: 35px;
+        height: 36px;
+      }
+    }
+    
+    &:nth-child(2) {
+      
+      &:before {
+        background: url(../img/testdrive-2.png) no-repeat;
+        background-size: cover;
+        width: 36px;
+        height: 36px;
+      }
+    }
+    
+    &:nth-child(3) {
+      
+      &:before {
+        background: url(../img/testdrive-3.png) no-repeat;
+        background-size: cover;
+        width: 46px;
+        height: 36px;
+      }
+    }
+    
+    &:nth-child(4) {
+      
+      &:before {
+        background: url(../img/testdrive-4.png) no-repeat;
+        background-size: cover;
+        width: 43px;
+        height: 41px;
+      }
+    }
+    
+    &:nth-child(5) {
+      
+      &:before {
+        background: url(../img/testdrive-5.png) no-repeat;
+        background-size: cover;
+        width: 48px;
+        height: 41px;
+      }
+    }
+    
+    &:nth-child(6) {
+      
+      &:before {
+        background: url(../img/testdrive-6.png) no-repeat;
+        background-size: cover;
+        width: 34px;
+        height: 34px;
+      }
+    }
+  }
+  
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 128px;
+  }
+}
