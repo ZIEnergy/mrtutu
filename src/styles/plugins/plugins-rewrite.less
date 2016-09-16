@@ -44,3 +44,35 @@
   background: url(../img/close.png) no-repeat;
   background-size: cover;
 }
+
+
+
+/* Slick */
+
+.slick-arrow {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -108px;
+  right: 0;
+  text-indent: -9999px;
+  background: url(../img/slider-arrow.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.slick-prev {
+  transform: rotate(180deg);
+  right: 49px;
+}
+
+.slick-arrow[aria-disabled="true"] {
+  opacity: .5;
+}
+
+.slick-slide {
+  
+  &:focus {
+    outline: none;
+  }
+}
