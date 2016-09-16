@@ -21,10 +21,33 @@ html(lang='en')
             .menu__item
               a.menu__item-link(href="#") Контакты
     .banner
-      .banner__item.banner__item--masters
-        .banner__item-author Студия Николая Кузнецова
-        h1.banner__item-header Миниатюрные железные дороги от <br>самых преданных мастеров своего дела
-        a.btn.btn--colored.banner__btn(href="#") Перейти в каталог
+      .banner__item-container
+        .banner__item.banner__item--masters
+          .banner__item-author Студия Николая Кузнецова
+          h1.banner__item-header Миниатюрные железные дороги от <br>самых преданных мастеров своего дела
+          a.btn.btn--colored.banner__btn(href="#") Перейти в каталог
+      .banner__item-container
+        .banner__item.banner__item--gift
+          h1.banner__item-header Самый впечатляющий <br>подарок вашему ребенку
+          .banner__item-author.banner__item-author--straight Студия Николая Кузнецова
+          a.btn.btn--colored.banner__btn(href="#") Перейти к наборам
+      .banner__item-container
+        .banner__item.banner__item--intellect
+          .banner__item-proof
+          h1.banner__item-header Инструмент развития интеллекта <br>у вашего ребёнка
+          a.banner__item-statement(href="#") Заключение
+          .banner__item-author.banner__item-author--straight Студия Николая Кузнецова
+          a.btn.btn--colored.banner__btn(href="#") Перейти к наборам
+      .banner__item-container
+        .banner__item.banner__item--dream
+          .banner__item-slogan
+          .banner__item-author Студия Николая Кузнецова
+          a.btn.btn--colored.banner__btn(href="#") Выбрать мечту
+      .banner__item-container
+        .banner__item.banner__item--studio
+          h1.banner__item-header Студия Николая Кузнецова
+          .banner__item-author Железные дороги в миниатюре
+          a.btn.btn--colored.banner__btn(href="#") Перейти в каталог
     .sets-section
       .wrapper
         h2.section-header.section-header--black.section-header--center.sets-section__header Готовые наборы
@@ -58,19 +81,19 @@ html(lang='en')
             .locomotives__item-info
               p.locomotives__item-name Модель «РЖД»
               p.locomotives__item-price 25 500 руб.
-              a.btn.btn--colored.locomotives__btn(href="#") Купить
+              a.btn.btn--colored.locomotives__btn.fancybox(href="#order") Купить
           li.locomotives__item
             img.locomotives__item-picture(src="img/locomotive-2.jpg", alt="Модель «Электровоз»")
             .locomotives__item-info
               p.locomotives__item-name Модель «Электровоз»
               p.locomotives__item-price 36 000 руб.
-              a.btn.btn--colored.locomotives__btn(href="#") Купить
+              a.btn.btn--colored.locomotives__btn.fancybox(href="#order") Купить
           li.locomotives__item
             img.locomotives__item-picture(src="img/locomotive-3.jpg", alt="Модель «Кран»")
             .locomotives__item-info
               p.locomotives__item-name Модель «Кран»
               p.locomotives__item-price 37 000 руб.
-              a.btn.btn--colored.locomotives__btn(href="#") Купить
+              a.btn.btn--colored.locomotives__btn.fancybox(href="#order") Купить
     .history
       .wrapper
         h2.section-header.section-header--white.section-header--left История студии

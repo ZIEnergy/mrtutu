@@ -1,5 +1,4 @@
 .banner {
-  height: 800px;
   width: 100%;
   background-size: cover;
   position: relative;
@@ -14,20 +13,44 @@
   }
   
   &__item {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
-    background: url(../img/banner-bg-1.jpg) no-repeat;
-    background-size: cover;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     
     &--masters {
+      padding-top: 315px;
+      background: url(../img/banner-bg-1.jpg) no-repeat;
+      background-size: cover;
+    }
+    
+    &--intellect {
+      padding-top: 315px;
+      background: url(../img/banner-bg-3.jpg) no-repeat;
+      background-size: cover;
+    }
+    
+    &--gift {
+      padding-top: 308px;
+      background: url(../img/banner-bg-2.jpg) no-repeat;
+      background-size: cover;
       
+      &__btn {
+        margin-top: 67px;
+      }
+    }
+    
+    &--dream {
+      padding-top: 315px;
+      background: url(../img/banner-bg-4.jpg) no-repeat;
+      background-size: cover;
+    }
+    
+    &--studio {
+      padding-top: 315px;
+      background: url(../img/banner-bg-5.jpg) no-repeat;
+      background-size: cover;
     }
   }
   
@@ -58,6 +81,19 @@
     &:before {
       right: 0;
     }
+    
+    &--straight {
+      margin-top: 40px;
+      font-family: @text-font;
+      font-size: 18px;
+      font-style: normal;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+      &:after, &:before {
+        width: 127px;
+      }
+    }
   }
   
   &__item-header {
@@ -71,5 +107,25 @@
   
   &__btn {
     margin-top: 80px;
+  }
+  
+  &__item-proof {
+    width: 318px;
+    height: 83px;
+    background: url(../img/banner-proof.png) no-repeat;
+    background-size: cover;
+  }
+  
+  &__item-statement {
+    color: @color-primary;
+    font-family: @text-font;
+    margin-top: 14px;
+  }
+  
+  &__item-slogan {
+    width: 991px;
+    height: 72px;
+    background: url(../img/dream-text.png) no-repeat;
+    background-size: cover;
   }
 }
