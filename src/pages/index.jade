@@ -22,15 +22,15 @@ html(lang='en')
               a.menu__item-link(href="#") Контакты
     .banner
       .banner__item-container
-        .banner__item.banner__item--masters
-          .banner__item-author Студия Николая Кузнецова
-          h1.banner__item-header Миниатюрные железные дороги от <br>самых преданных мастеров своего дела
+        .banner__item.banner__item--studio
+          h1.banner__item-header Студия Николая Кузнецова
+          .banner__item-author Железные дороги в миниатюре
           a.btn.btn--colored.banner__btn(href="#") Перейти в каталог
       .banner__item-container
-        .banner__item.banner__item--gift
-          h1.banner__item-header Самый впечатляющий <br>подарок вашему ребенку
-          .banner__item-author.banner__item-author--straight Студия Николая Кузнецова
-          a.btn.btn--colored.banner__btn(href="#") Перейти к наборам
+        .banner__item.banner__item--dream
+          .banner__item-slogan
+          .banner__item-author Студия Николая Кузнецова
+          a.btn.btn--colored.banner__btn(href="#") Выбрать мечту
       .banner__item-container
         .banner__item.banner__item--intellect
           .banner__item-proof
@@ -39,22 +39,48 @@ html(lang='en')
           .banner__item-author.banner__item-author--straight Студия Николая Кузнецова
           a.btn.btn--colored.banner__btn(href="#") Перейти к наборам
       .banner__item-container
-        .banner__item.banner__item--dream
-          .banner__item-slogan
-          .banner__item-author Студия Николая Кузнецова
-          a.btn.btn--colored.banner__btn(href="#") Выбрать мечту
+        .banner__item.banner__item--gift
+          h1.banner__item-header Самый впечатляющий <br>подарок вашему ребенку
+          .banner__item-author.banner__item-author--straight Студия Николая Кузнецова
+          a.btn.btn--colored.banner__btn(href="#") Перейти к наборам
       .banner__item-container
-        .banner__item.banner__item--studio
-          h1.banner__item-header Студия Николая Кузнецова
-          .banner__item-author Железные дороги в миниатюре
+        .banner__item.banner__item--masters
+          .banner__item-author Студия Николая Кузнецова
+          h1.banner__item-header Миниатюрные железные дороги от <br>самых преданных мастеров своего дела
           a.btn.btn--colored.banner__btn(href="#") Перейти в каталог
     .sets-section
       .wrapper
         h2.section-header.section-header--black.section-header--center.sets-section__header Готовые наборы
         ul.sets-section__list
           +set('Макет «Подарочный»', '140x100x80 см', '4-6 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-1.jpg', 'Ваш ребенок запомнит этот день на всю жизнь')
-          +set('Макет «Мечта детсва»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '95 000 руб.', 'set-2.jpg', 'Ваша мечта сбывается!')
-          +set('Макет «Детский интеллект»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Чешское качество', '130 000 руб.', 'set-3.jpg', 'Развивает интеллект у ребенка')
+          +set('Макет «Мечта детства»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '95 000 руб.', 'set-2.jpg', 'Ваша мечта сбывается!')
+          li.set
+            .set__left
+              h3.set__header Детский интеллект
+              .set-info
+                ul.set-info__numbers
+                  li.set-info__numbers-item
+                    .set-info__numbers-item-header Размер:
+                    .set-info__numbers-item-content 160x100x80 см
+                  li.set-info__numbers-item
+                    .set-info__numbers-item-header Производство:
+                    .set-info__numbers-item-content 6-7 дней
+                  li.set-info__numbers-item
+                    .set-info__numbers-item-header Срок службы:
+                    .set-info__numbers-item-content 10 лет
+                ul.set-info__features
+                  li.set-info__features-item Безопасен для ребенка
+                  li.set-info__features-item Развивает моторику у ребенка
+                  li.set-info__features-item Чешское качество
+              .set__bottom
+                a.btn.btn--colored.set__button.fancybox(href="#item") Подробнее
+                .set__price 130 000 руб.
+            .set__right
+              img.set__picture(src="img/set-3.jpg", alt='Макет «Детский интеллект»')
+              .set__quote
+                a(href="#").set__intellect-link Заключение психологов
+                .set__quote-content Развивает интеллект у ребенка
+                .set__quote-author Н. Кузнецов
           +set('Макет «Желанный»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '190 000 руб.', 'set-4.jpg', 'Никогда не надоедает, работает как машина')
           +set('Макет «Босс»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Немецкое качество', '60 000 руб.', 'set-5.jpg', 'Предназначен для хозяина жизни!')
           +set('Макет «Счастливый»', '160x100x80 см', '6-7 дней', '10 лет', 'Безопасен для ребенка','Развивает моторику у ребенка', 'Австрийское качество', '290 000 руб.', 'set-6.jpg', 'Счастье всей вашей семьи гарантированно')

@@ -33,16 +33,23 @@
 
 .fancybox-skin {
   border-radius: 0;
-  background: #fff;
+  background: transparent;
+  box-shadow: none!important;
 }
 
 .fancybox-close {
   width: 28px;
   height: 28px;
   top: 20px;
-  right: 23px;
+  right: 100px;
   background: url(../img/close.png) no-repeat;
+  opacity: .3;
   background-size: cover;
+  transition: @transition;
+  
+  &:hover {
+    opacity: 1;
+  }
 }
 
 
@@ -59,6 +66,16 @@
   background: url(../img/slider-arrow.png) no-repeat;
   background-size: cover;
   cursor: pointer;
+  transition: @transition;
+  
+  &:focus, &:active {
+    outline: none;
+  }
+  
+  &:hover, &:active {
+  background: url(../img/slider-arrow-hover.png) no-repeat;
+  background-size: cover;
+  }
 }
 
 .slick-prev {
@@ -68,6 +85,11 @@
 
 .slick-arrow[aria-disabled="true"] {
   opacity: .5;
+  
+  &:hover, &:active {
+    background: url(../img/slider-arrow.png) no-repeat;
+    background-size: cover;
+  }
 }
 
 .slick-slide {
@@ -75,4 +97,9 @@
   &:focus {
     outline: none;
   }
+}
+
+/*Perfect Scrollbar*/
+.ps-scrollbar-x-rail {
+  display: none!important;;
 }

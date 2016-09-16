@@ -1,5 +1,5 @@
 .item {
-  width: 880px;
+  width: 1040px;
   
   &__top {
     padding: 50px 45px 40px;
@@ -7,7 +7,7 @@
   }
   
   &__bottom {
-    padding: 45px 45px 50px;
+    padding: 45px 45px 40px;
     background: #f6f6f6;
   }
   
@@ -37,6 +37,26 @@
   
   &__gallery-thumbnail {
     display: block;
+    width: 90px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    &--active, &:hover {
+      border: @border-grey;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: @color-primary;
+      }
+    }
     
     &:nth-child(n+2) {
       margin-top: 15px;

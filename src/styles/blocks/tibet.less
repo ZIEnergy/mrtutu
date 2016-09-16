@@ -1,5 +1,5 @@
 .tibet {
-  width: 880px;
+  width: 1040px;
   overflow: hidden;
   
   &__top {
@@ -41,21 +41,12 @@
     }
     
     &:nth-child(2) {
+      padding-right: 325px;
       
       &:before {
         content: '2';
         top: -27px;
         left: 297px;
-      }
-    }
-    
-    &:nth-child(3) {
-      padding-right: 333px;
-      
-      &:before {
-        content: '3';
-        top: -34px;
-        right: 90px;
       }
       
       &:after {
@@ -69,6 +60,16 @@
         right: -100px;
         top: 50px;
         flex: 0 0 auto;
+        z-index: 9999;
+      }
+    }
+    
+    &:nth-child(3) {
+      
+      &:before {
+        content: '3';
+        top: -34px;
+        right: 90px;
       }
     }
     
@@ -76,7 +77,7 @@
       
       &:before {
         content: '4';
-        top: -51px;
+        top: -60px;
         left: 297px;
       }
     }

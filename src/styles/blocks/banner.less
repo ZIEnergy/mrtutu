@@ -2,14 +2,10 @@
   width: 100%;
   background-size: cover;
   position: relative;
+  overflow: hidden;
   
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, .35);
-    width: 100%;
-    height: 100%;
+  &__item-container {
+//    position: relative;
   }
   
   &__item {
@@ -18,6 +14,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: block;
+      border: 1px solid rgba(255, 255, 255, .35);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      margin: 20px;
+      width: calc(~"100% - 40px");
+      height: calc(~"100% - 40px");
+    }
     
     &--masters {
       padding-top: 315px;
@@ -26,9 +36,23 @@
     }
     
     &--intellect {
-      padding-top: 315px;
+      padding-top: 258px;
       background: url(../img/banner-bg-3.jpg) no-repeat;
       background-size: cover;
+      
+      .banner__item-header {
+        margin-top: 30px;
+      }
+      
+      .banner__btn {
+        margin-top: 40px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      
+      .banner__item-author {
+        margin-top: 28px;
+      }
     }
     
     &--gift {
@@ -36,21 +60,50 @@
       background: url(../img/banner-bg-2.jpg) no-repeat;
       background-size: cover;
       
-      &__btn {
+      .banner__btn {
         margin-top: 67px;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
     
     &--dream {
-      padding-top: 315px;
+      padding-top: 324px;
       background: url(../img/banner-bg-4.jpg) no-repeat;
       background-size: cover;
+      
+      .banner__item-author {
+        margin-top: 35px;
+        font-size: 39px;
+        width: 985px;
+        
+        &:after, &:before {
+          width: 160px;
+        }
+      }
+      
+      .banner__btn {
+        margin-top: 55px;
+      }
     }
     
     &--studio {
-      padding-top: 315px;
+      padding-top: 335px;
       background: url(../img/banner-bg-5.jpg) no-repeat;
       background-size: cover;
+      
+      .banner__item-author {
+        font-size: 39px;
+        margin-top: 26px;
+        
+        &:after, &:before {
+          width: 95px;
+        }
+      }
+      
+      .banner__btn {
+        margin-top: 40px;
+      }
     }
   }
   
@@ -107,6 +160,9 @@
   
   &__btn {
     margin-top: 80px;
+    width: 212px;
+    position: relative;
+    z-index: 100;
   }
   
   &__item-proof {
@@ -120,6 +176,12 @@
     color: @color-primary;
     font-family: @text-font;
     margin-top: 14px;
+    position: relative;
+    z-index: 100;
+    
+    &:hover {
+      text-decoration: none;
+    }
   }
   
   &__item-slogan {
