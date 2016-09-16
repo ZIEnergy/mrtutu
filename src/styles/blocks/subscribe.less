@@ -1,0 +1,40 @@
+.subscribe {
+  
+  &__header {
+    color: #fff;
+    font-family: @text-font;
+    font-size: 16px;
+  }
+  
+  &__form {
+    border: @border-dark;
+    width: 300px;
+    height: 40px;
+    margin-top: 18px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__input {
+    border: 0;
+    background: transparent;
+    height: 38px;
+    padding-left: 17px;
+    font-family: @text-font;
+    color: #fff;
+    font-size: 14px;
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  &__btn {
+    width: 20px;
+    height: 20px;
+    background: url(../img/submit-arrow.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+}
