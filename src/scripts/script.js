@@ -28,4 +28,27 @@ $(document).ready(function() {
     e.preventDefault();
     $.fancybox.close();
   });
+  
+  $('.banner__item-video').vide({
+    mp4: '../img/video.mp4',
+    webm: '../img/video.webm',
+    poster: '../img/banner-bg-5.jpg'
+  }, {
+    position: '50% 100%',
+    bgColor: '#221b17'
+  });
+  
+  $('a[href*=#]:not(.fancybox)').click(function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+  
 });

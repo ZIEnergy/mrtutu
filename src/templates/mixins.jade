@@ -1,4 +1,4 @@
-mixin set(title, size, crafting, durability, feature1, feature2, feature3, price, picture, quote)
+mixin set(title, size, crafting, durability, feature1, feature2, feature3, price, picture, quote, link)
   li.set
     .set__left
       h3.set__header #{title}
@@ -18,10 +18,50 @@ mixin set(title, size, crafting, durability, feature1, feature2, feature3, price
           li.set-info__features-item #{feature2}
           li.set-info__features-item #{feature3}
       .set__bottom
-        a.btn.btn--colored.set__button.fancybox(href="#item") Подробнее
+        a.btn.btn--colored.set__button.fancybox(href=link) Подробнее
         .set__price #{price}
     .set__right
       img.set__picture(src="img/" + picture, alt=title)
       .set__quote
         .set__quote-content #{quote}
         .set__quote-author Н. Кузнецов
+        
+        
+mixin item(link, name, imgBig, imgSmall1, imgSmall2, imgSmall3, imgSmall4, itemDscr, size, crafting, durability, feature1, feature2, feature3, price)
+  .modal.item(id=link)
+    .modal__container
+      .item__top
+        h2.section-header.section-header--black.section-header--left #{name}
+        .item__gallery
+          .item__gallery-main
+            img.item__gallery-main-picture(src=imgBig, alt="Railroad")
+          .item__gallery-thumbnails-container
+            a.item__gallery-thumbnail.item__gallery-thumbnail--active(href="#")
+              img.item__gallery-thumbnail-picture(src=imgSmall1, alt="Railroad")
+            a.item__gallery-thumbnail(href="#")
+              img.item__gallery-thumbnail-picture(src=imgSmall2, alt="Railroad")
+            a.item__gallery-thumbnail(href="#")
+              img.item__gallery-thumbnail-picture(src=imgSmall3, alt="Railroad")
+            a.item__gallery-thumbnail(href="#")
+              img.item__gallery-thumbnail-picture(src=imgSmall4, alt="Railroad")
+        .item__dscr #{itemDscr}
+      .item__bottom
+        .set-info.set-info--modal
+          ul.set-info__numbers
+            li.set-info__numbers-item
+              .set-info__numbers-item-header Размер:
+              .set-info__numbers-item-content #{size}
+            li.set-info__numbers-item
+              .set-info__numbers-item-header Производство:
+              .set-info__numbers-item-content #{crafting}
+            li.set-info__numbers-item
+              .set-info__numbers-item-header Срок службы:
+              .set-info__numbers-item-content #{durability}
+          ul.set-info__features
+            li.set-info__features-item #{feature1}
+            li.set-info__features-item #{feature2}
+            li.set-info__features-item #{feature3}
+        .item__buttons
+          .item__price #{price}
+          a.btn.btn--colored.item__btn.fancybox(href="#order") Заказать
+          .item__logo
