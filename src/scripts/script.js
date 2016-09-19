@@ -38,6 +38,18 @@ $(document).ready(function() {
     bgColor: '#221b17'
   });
   
+  $('#order').on('submit', function(e) {
+      e.preventDefault();
+      $.ajax({
+          type: "POST",
+          url: $(this).attr('action'),
+          data: $('#order').serialize(),
+          success: function () {
+            $('.order__form-hidden-link').click();
+          }
+      });
+  });
+  
   $('a[href*=#]:not(.fancybox)').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
       var target = $(this.hash);
