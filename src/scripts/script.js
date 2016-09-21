@@ -17,8 +17,6 @@ $(document).ready(function() {
     infinite: false,
   });
   
-  $('.modal').perfectScrollbar();
-  
   $('.story__btn').click(function(e) {
     e.preventDefault();
     $.fancybox.close();
