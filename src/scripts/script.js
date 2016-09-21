@@ -8,7 +8,15 @@ $(document).ready(function() {
     arrows: false,
     slidesToShow: 1,
     autoplay: true,
-    infinite: true
+    infinite: true,
+    autoplaySpeed: 8000,
+    fade: true
+  });
+  
+  $('.portfolio__slider').slick({
+    arrows: false,
+    slidesToShow: 1,
+    variableWidth: true
   });
   
   $('.locomotives__list').slick({
