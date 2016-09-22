@@ -26,23 +26,24 @@ mixin set(title, size, crafting, durability, feature1, feature2, feature3, price
         .set__quote-content #{quote}
         .set__quote-author Н. Кузнецов
         
-        
-mixin item(link, name, imgBig, imgSmall1, imgSmall2, imgSmall3, imgSmall4, itemDscr, size, crafting, durability, feature1, feature2, feature3, price)
+                  
+                
+mixin item(link, name, imgBig, imgSmall1, imgSmall2, imgSmall3, imgSmall4, imgBig1, imgBig2, imgBig3, imgBig4, itemDscr, size, crafting, durability, feature1, feature2, feature3, price)
   .modal.item(id=link)
     .modal__container
       .item__top
         h2.section-header.section-header--black.section-header--left #{name}
         .item__gallery
-          .item__gallery-main
+          a.item__gallery-main.cloud-zoom#zoom1(href=imgBig, rel="adjustX: 0, adjustY: 0, zoomWidth: 340, zoomHeight: 340")
             img.item__gallery-main-picture(src=imgBig, alt="Railroad")
           .item__gallery-thumbnails-container
-            a.item__gallery-thumbnail.item__gallery-thumbnail--active(href="#")
-              img.item__gallery-thumbnail-picture(src=imgSmall1, alt="Railroad")
-            a.item__gallery-thumbnail(href="#")
+            a.item__gallery-thumbnail.item__gallery-thumbnail--active.cloud-zoom-gallery(href=imgBig1, rel="useZoom: 'zoom1', smallImage: 'img/set-1.jpg'")
+              img.item__gallery-thumbnail-picture(src=imgSmall1, alt="Railroad", align="left")
+            a.item__gallery-thumbnail.cloud-zoom-gallery(href=imgBig2, rel="useZoom: 'zoom1', smallImage: 'img/set-2.jpg'")
               img.item__gallery-thumbnail-picture(src=imgSmall2, alt="Railroad")
-            a.item__gallery-thumbnail(href="#")
+            a.item__gallery-thumbnail.cloud-zoom-gallery(href=imgBig3, rel="useZoom: 'zoom1', smallImage: 'img/set-3.jpg'")
               img.item__gallery-thumbnail-picture(src=imgSmall3, alt="Railroad")
-            a.item__gallery-thumbnail(href="#")
+            a.item__gallery-thumbnail.cloud-zoom-gallery(href=imgBig4, rel="useZoom: 'zoom1', smallImage: 'img/set-4.jpg'")
               img.item__gallery-thumbnail-picture(src=imgSmall4, alt="Railroad")
         .item__dscr #{itemDscr}
       .item__bottom
