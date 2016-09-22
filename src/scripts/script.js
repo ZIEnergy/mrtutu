@@ -12,13 +12,13 @@ $(document).ready(function () {
         autoplaySpeed: 8000,
         fade: true
       });
-
+  
       $('.portfolio__slider').slick({
         centerMode: true,
-        arrows: false,
         slidesToShow: 1,
         variableWidth: true,
-        infinite: true
+        infinite: true,
+        initialSlide: 3
       });
   
       $('.item__gallery-thumbnail').click(function() {
@@ -58,7 +58,43 @@ $(document).ready(function () {
           url: $(this).attr('action'),
           data: $('#order').serialize(),
           success: function () {
-            $('.order__form-hidden-link').click();
+            $('.modal-form__hidden-link').click();
+          }
+        });
+      });
+
+      $('#testdrive').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: $(this).attr('action'),
+          data: $('#testdrive').serialize(),
+          success: function () {
+            $('.modal-form__hidden-link').click();
+          }
+        });
+      });
+
+      $('#advice').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: $(this).attr('action'),
+          data: $('#advice').serialize(),
+          success: function () {
+            $('.modal-form__hidden-link').click();
+          }
+        });
+      });
+
+      $('.subscribe__form').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: $(this).attr('action'),
+          data: $('.subscribe__form').serialize(),
+          success: function () {
+            $('.subscribe__hidden-link').click();
           }
         });
       });

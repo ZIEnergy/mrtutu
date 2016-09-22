@@ -100,8 +100,8 @@ html(lang='en')
           li.individual__reasons-item Желаете много пара
           li.individual__reasons-item Желаете менее компактный
         .individual__btns
-          a.btn.btn--transparent.individual__btn.fancybox(href="#portfolio") Портфолио работ
-          a.btn.btn--colored.individual__btn.fancybox(href="#order") Заказать консультацию
+          a.btn.btn--transparent.individual__btn.fancybox#portfolio-btn(href="#portfolio") Портфолио работ
+          a.btn.btn--colored.individual__btn.fancybox(href="#advice") Заказать консультацию
     .locomotives#locomotives
       .wrapper
         h2.section-header.section-header--black.section-header--left Подарочные локомотивы
@@ -160,7 +160,7 @@ html(lang='en')
             li.testdrive__features-item Посмотрие столкновение и переворачивание поездов
             li.testdrive__features-item Купите железную дорогу
           .testdrive__bottom
-            a.btn.btn--colored.fancybox(href="#order") Записаться на тестдрайв
+            a.btn.btn--colored.fancybox(href="#testdrive") Записаться на тестдрайв
     .faq
       .wrapper
         h2.section-header.section-header--white.section-header--left Часто задаваемые вопросы
@@ -207,7 +207,8 @@ html(lang='en')
         .footer__right
           .subscribe
             .subscribe__header Подписаться на новые работы
-            form.subscribe__form
+            form.subscribe__form(action="subscribe.php" method="POST")
+              a.subscribe__hidden-link.fancybox(href="#subscribe-success")
               input.subscribe__input(type="text" placeholder="Ваш e-mail" name="email")
               button.subscribe__btn
     include ../templates/modals.jade

@@ -1,4 +1,4 @@
-.order {
+.modal-form {
   width: 620px;
   padding: 0;
   
@@ -23,7 +23,7 @@
     text-align: center;
   }
   
-  &__form-item {
+  &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,7 @@
     }
   }
   
-  &__form-item-header {
+  &__item-header {
     color: #434343;
     font-size: 18px;
     font-weight: 700;
@@ -44,8 +44,15 @@
     width: 252px;
   }
   
-  &__form-hidden-link {
+  &__hidden-link {
     position: absolute;
     visibility: hidden;
+  }
+  
+  &__comment-link {
+    color: @color-primary;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: @header-font;
   }
 }

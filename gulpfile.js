@@ -14,6 +14,7 @@ gulp.task('build', [
     'fonts',
     'images',
     'scripts',
+    'php',
     'templates',
     'styles'
 ]);
@@ -47,6 +48,11 @@ gulp.task('connect', function() {
 gulp.task('scripts', function () {
   gulp.src('./src/scripts/*.js')
     .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('php', function () {
+  gulp.src('./src/php/*.php')
+    .pipe(gulp.dest('./build'));
 });
 
 gulp.task('styles', function () {

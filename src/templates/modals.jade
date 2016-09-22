@@ -52,38 +52,65 @@
     .story__bottom
       a.btn.btn--colored.story__btn(href="#") Закрыть
     
-.modal.order#order
-  form.order__form(action="mail.php", method="POST")
-    .order__top
+.modal.modal-form.modal-form--order#order
+  a.modal-form__hidden-link.fancybox(href="#modal-success")
+  form.modal-form__content(action="mail.php", method="POST")
+    .modal-form__top
       h2.section-header.section-header--black.section-header--center Оформление заказа
-      .order__comment Для оформления заказа, заполните поля ниже
-      .order__form-item
-        p.order__form-item-header Как вас зовут:
+      .modal-form__comment Для оформления заказа, заполните поля ниже
+      .modal-form__item
+        p.modal-form__item-header Как вас зовут:
         input.input(type="text" name="name" required)
-      .order__form-item
-        p.order__form-item-header Телефон:
+      .modal-form__item
+        p.modal-form__item-header Телефон:
         input.input(type="text" name="phone" required)
-    .order__bottom
+    .modal-form__bottom
       button.btn.btn--colored.order__btn Отправить
     
-.modal.order#order-success
-  .order__form
-    .order__top
-      h2.section-header.section-header--black.section-header--center Спасибо за заказ!
-      .order__comment Наши менеджеры свяжутся с вами в самое ближайшее время!
-    .order__bottom
+.modal.modal-form.modal-form--testdrive#testdrive
+  a.modal-form__hidden-link.fancybox(href="#modal-success")
+  form.modal-form__content(action="mail.php", method="POST")
+    .modal-form__top
+      h2.section-header.section-header--black.section-header--center Запись на тестдрайв
+      .modal-form__comment Для записи на тестдрайв, заполните поля ниже
+      .modal-form__item
+        p.modal-form__item-header Как вас зовут:
+        input.input(type="text" name="name" required)
+      .modal-form__item
+        p.modal-form__item-header Телефон:
+        input.input(type="text" name="phone" required)
+    .modal-form__bottom
       button.btn.btn--colored.order__btn Отправить
+    
+.modal.modal-form.modal-form--advice#advice
+  a.modal-form__hidden-link.fancybox(href="#modal-success")
+  form.modal-form__content(action="mail.php", method="POST")
+    .modal-form__top
+      h2.section-header.section-header--black.section-header--center Получить консультацию
+      .modal-form__comment Для получения консультации, заполните поля ниже
+      .modal-form__item
+        p.modal-form__item-header Как вас зовут:
+        input.input(type="text" name="name" required)
+      .modal-form__item
+        p.modal-form__item-header Телефон:
+        input.input(type="text" name="phone" required)
+    .modal-form__bottom
+      button.btn.btn--colored.order__btn Отправить
+    
+.modal.modal-form#modal-success
+  .modal-form__form
+    .modal-form__top
+      h2.section-header.section-header--black.section-header--center Спасибо!
+      .modal-form__comment Наши менеджеры свяжутся с вами в самое ближайшее время!
       
-.modal.order#subscribe-success
-  .order__form
-    .order__top
+.modal.modal-form#subscribe-success
+  .modal-form__form
+    .modal-form__top
       h2.section-header.section-header--black.section-header--center Вы подписались на рассылку
-      .order__comment 
-        ||Ваша почта
-        a.order__comment-link(href="#") mumijo@yandex.ru
-        ||добавлена в нашу базу для рассылок
-    .order__bottom
-      button.btn.btn--colored.order__btn Отправить
+      .modal-form__comment 
+        |Ваша почта 
+        a.modal-form__comment-link(href="#") mumijo@yandex.ru
+        |&nbsp;добавлена в нашу базу для рассылок
       
 .portfolio#portfolio
   .portfolio__close
