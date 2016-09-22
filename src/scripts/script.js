@@ -14,9 +14,16 @@ $(document).ready(function () {
       });
 
       $('.portfolio__slider').slick({
+        centerMode: true,
         arrows: false,
         slidesToShow: 1,
-        variableWidth: true
+        variableWidth: true,
+        infinite: true
+      });
+  
+      $('.item__gallery-thumbnail').click(function() {
+        $('.item__gallery-thumbnail').removeClass('item__gallery-thumbnail--active');
+        $(this).addClass('item__gallery-thumbnail--active');
       });
 
       $('.locomotives__list').slick({
@@ -329,6 +336,10 @@ $(document).ready(function () {
             }]
           }]
         };
+        
+        $('.portfolio__close').click(function() {
+          parent.$.fancybox.close();
+        });
 
         // Get the HTML DOM element that will contain your map 
         // We are using a div with id="map" seen below in the <body>

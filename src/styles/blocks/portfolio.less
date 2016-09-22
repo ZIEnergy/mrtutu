@@ -1,11 +1,46 @@
 .portfolio {
   display: none;
   
+  &__header {
+    font-size: 38px;
+    color: #fff;
+    text-align: center;
+    font-family: @header-font;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
   &__slider {
-    
+    margin-left: -20px;
+    margin-right: -20px;
   }
   
   &__slider-item {
+    max-height: 500px;
+    width: auto;
+    margin: 0 30px;
+    filter: grayscale(100%);
+  }
+  
+  .slick-current {
+    filter: none;
+  }
+  
+  &__close {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: url(../img/close-white.png) no-repeat;
+    background-size: cover;
+    opacity: 1;
+    transition: @transition;
     
+    &:hover {
+      opacity: .7;
+    }
   }
 }
