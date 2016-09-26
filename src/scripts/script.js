@@ -45,7 +45,6 @@ $(document).ready(function () {
       $('.banner__item-video').vide({
         mp4: '../img/video.mp4',
         webm: '../img/video.webm',
-        poster: '../img/banner-bg-5.jpg'
       }, {
         position: '50% 100%',
         bgColor: '#221b17'
