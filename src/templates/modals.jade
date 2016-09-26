@@ -52,9 +52,9 @@
     .story__bottom
       a.btn.btn--colored.story__btn(href="#") Закрыть
     
-.modal.modal-form.modal-form--order#order
-  a.modal-form__hidden-link.fancybox(href="#modal-success")
-  form.modal-form__content(action="mail.php", method="POST")
+form.modal.modal-form.modal-form--order#order(action="order.php", method="POST")
+  a.modal-form__hidden-link.modal-form__hidden-link--order.fancybox(href="#modal-success")
+  .modal-form__content
     .modal-form__top
       h2.section-header.section-header--black.section-header--center Оформление заказа
       .modal-form__comment Для оформления заказа, заполните поля ниже
@@ -63,13 +63,13 @@
         input.input(type="text" name="name" required)
       .modal-form__item
         p.modal-form__item-header Телефон:
-        input.input(type="text" name="phone" required)
+        input.input(type="tel" name="phone" required)
     .modal-form__bottom
       button.btn.btn--colored.modal-form__btn Отправить
     
-.modal.modal-form.modal-form--testdrive#testdrive
-  a.modal-form__hidden-link.fancybox(href="#modal-success")
-  form.modal-form__content(action="mail.php", method="POST")
+form.modal.modal-form.modal-form--testdrive#testdrive(action="testdrive.php", method="POST")
+  a.modal-form__hidden-link.modal-form__hidden-link--testdrive.fancybox(href="#modal-success")
+  .modal-form__content
     .modal-form__top
       h2.section-header.section-header--black.section-header--center Запись на тестдрайв
       .modal-form__comment Для записи на тестдрайв, заполните поля ниже
@@ -78,13 +78,13 @@
         input.input(type="text" name="name" required)
       .modal-form__item
         p.modal-form__item-header Телефон:
-        input.input(type="text" name="phone" required)
+        input.input(type="tel" name="phone" required)
     .modal-form__bottom
       button.btn.btn--colored.modal-form__btn Отправить
     
-.modal.modal-form.modal-form--advice#advice
-  a.modal-form__hidden-link.fancybox(href="#modal-success")
-  form.modal-form__content(action="mail.php", method="POST")
+form.modal.modal-form.modal-form--advice#advice(action="advice.php", method="POST")
+  a.modal-form__hidden-link.modal-form__hidden-link--advice.fancybox(href="#modal-success")
+  .modal-form__content
     .modal-form__top
       h2.section-header.section-header--black.section-header--center Получить консультацию
       .modal-form__comment Для получения консультации, заполните поля ниже
@@ -93,7 +93,7 @@
         input.input(type="text" name="name" required)
       .modal-form__item
         p.modal-form__item-header Телефон:
-        input.input(type="text" name="phone" required)
+        input.input(type="tel" name="phone" required)
     .modal-form__bottom
       button.btn.btn--colored.modal-form__btn Отправить
     
@@ -109,7 +109,7 @@
       h2.section-header.section-header--black.section-header--center Вы подписались на рассылку
       .modal-form__comment 
         |Ваша почта 
-        a.modal-form__comment-link(href="#") mumijo@yandex.ru
+        a.modal-form__comment-link(href="#")
         |&nbsp;добавлена в нашу базу для рассылок
       
 .portfolio#portfolio

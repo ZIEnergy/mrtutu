@@ -1,11 +1,11 @@
 .footer {
   background: url(../img/footer-bg.jpg) no-repeat;
   background-size: cover;
-  padding: 30px;
   
   &__wrapper {
     display: flex;
     align-items: stretch;
+    padding: 30px;
   }
   
   &__left {
@@ -26,16 +26,6 @@
     flex: 0 0 auto;
   }
   
-  &__btn {
-    font-size: 16px;
-    padding-left: 22px;
-    padding-right: 22px;
-    flex: 0 0 auto;
-    height: 53px;
-    white-space: nowrap;
-    margin-bottom: 20px;
-  }
-  
   &__right {
     width: 33%;
     border-left: @border-dark;
@@ -44,6 +34,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  &__btn {
+    font-size: 16px;
+    padding-left: 22px;
+    padding-right: 22px;
+    flex: 0 0 auto;
+    height: 53px;
+    white-space: nowrap;
+    margin-bottom: 20px;
   }
   
   &__copyright {

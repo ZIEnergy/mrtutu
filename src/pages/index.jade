@@ -206,6 +206,6 @@ html(lang='en')
             .subscribe__header Подписаться на новые работы
             form.subscribe__form(action="subscribe.php" method="POST")
               a.subscribe__hidden-link.fancybox(href="#subscribe-success")
-              input.subscribe__input(type="text" placeholder="Ваш e-mail" name="email")
+              input.subscribe__input(type="email" placeholder="Ваш e-mail" name="email" required)
               button.subscribe__btn
     include ../templates/modals.jade

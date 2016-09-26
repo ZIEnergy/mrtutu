@@ -51,38 +51,38 @@ $(document).ready(function () {
         bgColor: '#221b17'
       });
 
-      $('#order').on('submit', function (e) {
+      $('.modal-form--order').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-          type: "POST",
+          type: "post",
           url: $(this).attr('action'),
-          data: $('#order').serialize(),
+          data: $(this).serialize(),
           success: function () {
-            $('.modal-form__hidden-link').click();
+            $('.modal-form__hidden-link--order').click();
           }
         });
       });
 
-      $('#testdrive').on('submit', function (e) {
+      $('.modal-form--testdrive').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-          type: "POST",
+          type: "post",
           url: $(this).attr('action'),
-          data: $('#testdrive').serialize(),
+          data: $(this).serialize(),
           success: function () {
-            $('.modal-form__hidden-link').click();
+            $('.modal-form__hidden-link--testdrive').click();
           }
         });
       });
 
-      $('#advice').on('submit', function (e) {
+      $('.modal-form--advice').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-          type: "POST",
+          type: "post",
           url: $(this).attr('action'),
-          data: $('#advice').serialize(),
+          data: $(this).serialize(),
           success: function () {
-            $('.modal-form__hidden-link').click();
+            $('.modal-form__hidden-link--advice').click();
           }
         });
       });
@@ -90,10 +90,11 @@ $(document).ready(function () {
       $('.subscribe__form').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-          type: "POST",
+          type: "post",
           url: $(this).attr('action'),
-          data: $('.subscribe__form').serialize(),
+          data: $(this).serialize(),
           success: function () {
+            $('.modal-form__comment-link').text($('.subscribe__input').val());
             $('.subscribe__hidden-link').click();
           }
         });
