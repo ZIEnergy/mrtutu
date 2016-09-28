@@ -198,7 +198,7 @@ html(lang='en')
           p.footer__dscr Коллектив специалистов железнодорожного макетирования
         .footer__center
           a.btn.btn--transparent.footer__btn.fancybox(href="#tibet") Тибетский взгляд на воспитание детей
-          a.creator(href="#")
+          a.creator(href="http://dobrodeteli.ru/")
             img.creator__logo(src="img/creator-logo.png", alt="")
             .creator__link Создание сайта
         .footer__right
@@ -209,3 +209,30 @@ html(lang='en')
               input.subscribe__input(type="email" placeholder="Ваш e-mail" name="email" required)
               button.subscribe__btn
     include ../templates/modals.jade
+    |<!-- Yandex.Metrika counter -->
+    |<script type="text/javascript">
+    |    (function (d, w, c) {
+    |        (w[c] = w[c] || []).push(function() {
+    |            try {
+    |                w.yaCounter39836705 = new Ya.Metrika({
+    |                    id:39836705,
+    |                    clickmap:true,
+    |                    trackLinks:true,
+    |                    accurateTrackBounce:true,
+    |                    webvisor:true
+    |                });
+    |            } catch(e) { }
+    |        });
+    |        var n = d.getElementsByTagName("script")[0],
+    |            s = d.createElement("script"),
+    |            f = function () { n.parentNode.insertBefore(s, n); };
+    |        s.type = "text/javascript";
+    |        s.async = true;
+    |        s.src = "https://mc.yandex.ru/metrika/watch.js";
+    |        if (w.opera == "[object Opera]") {
+    |            d.addEventListener("DOMContentLoaded", f, false);
+    |        } else { f(); }
+    |    })(document, window, "yandex_metrika_callbacks");
+    |</script>
+    |<noscript><div><img src="https://mc.yandex.ru/watch/39836705" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    |<!-- /Yandex.Metrika counter -->
