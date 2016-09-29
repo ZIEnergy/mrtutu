@@ -163,11 +163,6 @@
     var onLoad = function() {
       callback(this.src);
     };
-
-    $('<img src="' + path + '.gif">').load(onLoad);
-    $('<img src="' + path + '.jpg">').load(onLoad);
-    $('<img src="' + path + '.jpeg">').load(onLoad);
-    $('<img src="' + path + '.png">').load(onLoad);
   }
 
   /**
@@ -297,12 +292,6 @@
       }
 
       $video = vide.$video = $('<video>' + sources + '</video>');
-    } else {
-      $video = vide.$video = $('<video>' +
-        '<source src="' + path + '.mp4" type="video/mp4">' +
-        '<source src="' + path + '.webm" type="video/webm">' +
-        '<source src="' + path + '.ogv" type="video/ogg">' +
-        '</video>');
     }
 
     // https://github.com/VodkaBears/Vide/issues/110

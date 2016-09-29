@@ -26,9 +26,12 @@
     width: auto;
     margin: 0 30px;
     filter: grayscale(100%);
+    &.slick-current, &.slick-active {
+      filter: none;
+    }
   }
   
-  .slick-current {
+  .slick-current, .slick-active {
     filter: none;
   }
   
