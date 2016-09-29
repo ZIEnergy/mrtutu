@@ -26,6 +26,11 @@
     width: auto;
     margin: 0 30px;
     filter: grayscale(100%);
+
+    @media screen and (max-width:1200px) {
+      max-height: none;
+    }
+    
     &.slick-current, &.slick-active {
       filter: none;
     }

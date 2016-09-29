@@ -15,7 +15,7 @@ $(document).ready(function () {
   
       $('.portfolio__slider').slick({
         centerMode: true,
-        slidesToShow: 1,
+//        slidesToShow: 1,
         centerPadding: '50%',
         variableWidth: true,
         infinite: true,
